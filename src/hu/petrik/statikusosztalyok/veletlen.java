@@ -2,10 +2,7 @@ package hu.petrik.statikusosztalyok;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public final class veletlen {
     private veletlen() {}
@@ -72,6 +69,25 @@ public final class veletlen {
      */
     public static String velTeljesNev(boolean nem){
         return velVezetekNev()+" "+velKeresztNev(nem);
+    }
+
+    public static String velEmail(String name) {
+        int id = velEgesz(0, 1000);
+        String email = String.format("%s%d@gmail.com", name, id);
+        return email;
+    }
+
+    public static String velMobil() {
+        return String.format("+36 (30)%d%d%d-%d%d-%d%d", velEgesz(0, 9), velEgesz(0, 9), velEgesz(0, 9), velEgesz(0, 9), velEgesz(0, 9), velEgesz(0, 9), velEgesz(0, 9));
+    }
+
+    public static String velSportag() {
+        List<String> sportagList = new ArrayList<>();
+        Scanner scR = new Scanner("sportag.txt");
+        while (scR.hasNext()) {
+            sportagList.add(scR.nextLine());
+        }
+        return sportagList.get(velEgesz(0, sportagList.size() - 1));
     }
 }
 
