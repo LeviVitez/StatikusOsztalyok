@@ -13,5 +13,9 @@ public class Main {
         for (int i = 0; i <100 ; i++) {
             System.out.println(veletlen.velEgesz(5,10));
         }
+        System.out.println();
+        for (int i = 0; i < 50; i++) {
+            System.out.println(veletlen.velKarakter('A','Z'));
+        }
     }
 }
