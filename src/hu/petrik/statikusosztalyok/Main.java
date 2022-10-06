@@ -17,5 +17,14 @@ public class Main {
         for (int i = 0; i < 50; i++) {
             System.out.println(veletlen.velKarakter('A','Z'));
         }
+        System.out.println();
+        for (int i = 0; i <5 ; i++) {
+            System.out.println(veletlen.velTeljesNev(true));
+        }
+        System.out.println();
+        for (int i = 0; i <5 ; i++) {
+            System.out.println(veletlen.velTeljesNev(false));
+        }
+
     }
 }
